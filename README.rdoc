@@ -1,0 +1,34 @@
+== Import contacts from Gmail/Yahoo/Hotmail  in Rail by Omnicontacts ==
+
+ This is simple to import contacts from varous mails providers/networks by using the omnicontacts gem.
+
+ Please follow below steps to implement the omnicontacts in rails for import contacts,
+
+Step 1:
+
+ gem install 'omnicontacts'
+ 
+- Include in Gemfile
+
+ gem 'omnicontacts'
+
+Step 2:
+
+Place omnicontacts.rb file in app/intializers to include following things,
+
+- importer :gmail, "client_id", "client_secret", {:redirect_path => "/oauth2callback", :ssl_ca_file => "/etc/ssl/certs/curl-ca-bundle.crt"}
+  importer :yahoo, "consumer_id", "consumer_secret", {:callback_path => '/callback'}
+  importer :hotmail, "client_id", "client_secret"
+
+Step 3:
+
+  Get the respected client_id and secret keys from various with your personal mail Id from following URL's,
+  
+  1) Gmail : https://code.google.com/apis/console  => get client_id and secret token and attenttion with redirection url
+  2) Yahoo : https://developer.apps.yahoo.com    => myprojects
+  3) Hotmail - http://msdn.microsoft.com/en-us/library/cc287659.aspx - http://msdn.microsoft.com/en-us/library/cc287659.aspx
+             - http://isdk.dev.live.com/ISDK.aspx?category=scenarioGroup_hotmail&index=1
+
+Step 4:
+
+ Continue your developmentation after got the contacts collection as I implemented in this app.
