@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImportContacts</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h2>Import contacts from your existing below networks/email providers.</h2><br>
+    <h2>Invite them and share your Idea</h2><br><br>
+    <%= link_to image_tag('gmail.png'), '/contacts/gmail' %>&nbsp;&nbsp;&nbsp;
+    <%= link_to image_tag('yahoo.png'), '/contacts/yahoo' %><br>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+<h2>Imported Contacts From Your Gmail/Yahoo/Hotmail</h2><br><br>
+<table>
+<% @contacts.each do |contact| %>
+<tr><td><%= contact[:name] %></td><td><%= contact[:email] %></td></tr>
+<% end %>
+</table>

@@ -1,0 +1,19 @@
+class ProfilesController < ApplicationController
+ 
+
+  def contacts_callback
+  @contacts = request.env['omnicontacts.contacts']
+   
+  end
+
+  def import_failed
+  # you can redirect to wherever you want. Just sample sake I defined
+  @profile = Profile.find(current_user)
+  redirect_to @profile, notice: "You have canceled the request."
+  end
+
+ 
+  
+  
+end
+
